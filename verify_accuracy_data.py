@@ -3,6 +3,7 @@ import re
 
 path_customer = "<PATH_TO_CUSTOMER_DATA>"
 path_order = "<PATH_TO_ORDER_DATA>"
+path_shipping = "<PATH_TO_SHIPPING_FILE>"
 
 def load_customer_csv(csv_path):
     df = pd.read_csv(csv_path)
@@ -12,7 +13,7 @@ df1 = load_customer_csv(path_customer)
 df2 = load_customer_csv(path_order)
 #print(df1.head())
 
-df3 = pd.read_json("<PATH_TO_SHIPPING_FILE>")
+df3 = pd.read_json(path_shipping)
 #print(df3.head())
 
 def check_special_chars(df,column_name):
