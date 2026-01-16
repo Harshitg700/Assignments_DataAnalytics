@@ -64,7 +64,7 @@ from(
 Select od.item,count(*)
 from fact_order od 
 inner join dim_customer cst on od.Customer_ID = cst.Customer_ID
-where (cst.age <30)
+where cst.age <30
 group by 1 
 order by 2 desc 
 limit 1)xyz
@@ -77,7 +77,7 @@ Select
 od.item,count(*)
 from fact_order od 
 inner join dim_customer cst on od.Customer_ID = cst.Customer_ID
-where (cst.age >30)
+where cst.age >30
 group by 1 
 order by 2 desc 
 limit 1) xyz;
